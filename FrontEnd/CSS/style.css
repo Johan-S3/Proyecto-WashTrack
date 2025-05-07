@@ -1,0 +1,47 @@
+@import url(varaibles.css);
+
+.body{
+  height: 100vh;
+  min-width: none;
+  background: linear-gradient(125deg, var(--colorTerciario), var(--colorPrincipal) );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  align-items: center;
+  width: 370px;
+  height: min-content;
+  background: linear-gradient(125deg, var(--colorTerciario), var(--colorPrincipal) );
+  border: 1px solid var(--colorPrincipal);
+  border-radius: 25px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+.form__title{
+  font-size: 35px;
+  text-align: center;
+  padding: 8% 0;
+  font-family: "DM Serif Text", serif;
+}
+.form__label{
+  font-size: 1.1rem;
+  padding: 20px 0 5px 0;
+  font-weight: 400;
+}
+
+.form__input{
+  font-size: 0.9rem;
+  border-radius: 25px;
+  padding: 0.45rem 1rem;
+  outline: none;
+}
+
+.form__button{
+  
+}
