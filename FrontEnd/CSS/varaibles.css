@@ -14,4 +14,10 @@
   --colorTerciario: #13D93E;
   --colorCuartenario: #0AD0E9;
   --colorAdicional: #9CACC4;
+  --colorSombras: #000;
+  --colorBlanco: #fff;
+
+  --sectionSize: 600px;
+
+  --timeTransition: 0.25s
 }
