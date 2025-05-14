@@ -1,4 +1,4 @@
-@import url(varaibles.css);
+@import url(variables.css);
 
 body{
   height: 100vh;
@@ -47,7 +47,7 @@ body{
   width: 600px;
   height: 100%;
   background-color: var(--colorSecundario);
-  border-radius: 45px 0 0 45px;
+  border-radius: var(--borderRadiusForms) 0 0 var(--borderRadiusForms);
   filter: drop-shadow(-5px 0 10px var(--colorSombras));
 
 }
@@ -76,7 +76,7 @@ body{
 .form__input, .form__select{
   width: 100%;
   font-size: 1.2rem;
-  border-radius: 25px;
+  border-radius: var(--borderRadiusInputs);
   padding: 0.6rem 1.2rem;
   outline: none;
   border: none;
@@ -95,7 +95,7 @@ body{
   font-size: 1.2rem;
   width: 40%;
   border: none;
-  border-radius: 25px;
+  border-radius: var(--borderRadiusInputs);
   background-color: var(--colorTerciario);
   color: var(--colorBlanco);
   cursor: pointer;
@@ -123,10 +123,4 @@ body{
 }
 .form__link:hover{
   color: var(--colorTerciario);
-}
-
-.form--bloque{
-  background-color: var(--colorSecundario);
-  width: 50vw;
-  height: 75vh;
 }

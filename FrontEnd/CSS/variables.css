@@ -18,6 +18,8 @@
   --colorBlanco: #fff;
 
   --sectionSize: 600px;
+  --borderRadiusForms: 45px;
+  --borderRadiusInputs: 25px;
 
   --timeTransition: 0.25s
 }
