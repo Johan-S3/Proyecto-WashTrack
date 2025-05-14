@@ -8,6 +8,19 @@
   font-style: normal;
 }
 
+*::selection{
+  background-color: var(--colorTerciario);
+}
+
+::-webkit-scrollbar{
+  width: 6px;
+  /* background-color: transparent; */
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--colorPrincipal);
+  border-radius: var(--borderRadiusInputs);
+}
+
 :root{
   --colorPrincipal: #08356E;
   --colorSecundario: #8996A9;
