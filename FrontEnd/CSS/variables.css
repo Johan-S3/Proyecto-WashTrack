@@ -14,18 +14,22 @@
 
 ::-webkit-scrollbar{
   width: 6px;
-  /* background-color: transparent; */
+  border-radius: var(--borderRadiusInputs);
 }
 ::-webkit-scrollbar-thumb{
   background-color: var(--colorPrincipal);
   border-radius: var(--borderRadiusInputs);
 }
 
+.scrollSecundario::-webkit-scrollbar-thumb{
+  background-color: var(--colorCuaternario);
+}
+
 :root{
   --colorPrincipal: #08356E;
   --colorSecundario: #8996A9;
   --colorTerciario: #13D93E;
-  --colorCuartenario: #0AD0E9;
+  --colorCuaternario: #0AD0E9;
   --colorAdicional: #9CACC4;
   --colorSombras: #000;
   --colorBlanco: #fff;
