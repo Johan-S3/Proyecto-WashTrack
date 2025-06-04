@@ -143,6 +143,7 @@ body{
   scale: 1.05;
 }
 
+/* Estilo para el panel que contiene las cards con información de los vehiculos */
 .panel{
   width: 100%;
   height: auto;
@@ -152,6 +153,8 @@ body{
   grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
   /* overflow-y: scroll; */
 }
+
+/* Estilos para la card de con información del lavado */
 .panel__card{
   width: 240px;
   height: 240px;
@@ -164,18 +167,29 @@ body{
   padding: 5%;
 }
 
-.card__vehicle{
+.panel__card--active{
+  background-color: var(--colorSecundario);
+}
+
+.card__information, .card__washer{
   font-size: 18px;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .card__icon{
   text-align: right;
   font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .card__plate, .card__space{
   grid-column: 1/3;
   text-align: center;
+  font-size: 30px;
 }
 
 .card__space{
@@ -193,5 +207,42 @@ body{
   align-items: center;
   justify-content: center;
   background-color: var(--colorTerciario);
+  color: var(--colorSombras);
   border-radius: 50%;
+  transition: var(--timeTransition);
+  text-decoration: none;
+}
+
+.space__icon--scale{
+  background-color: var(--colorPrincipal);
+  color: var(--colorBlanco);
+  scale: 1.2;
+}
+
+.space__icon:hover{
+  filter: drop-shadow(0px 0px 5px var(--colorPrincipal));
+}
+
+.card__washer{
+  justify-content: end;
+  align-items: end;
+  gap: 10px;
+}
+
+.panel__card--add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space__icon--big{
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  color: var(--colorPrincipal);
+}
+
+.space__icon--big:hover{
+  scale: 1.2;
+  filter: drop-shadow(0px 0px 5spx var(--colorTerciario));
 }
