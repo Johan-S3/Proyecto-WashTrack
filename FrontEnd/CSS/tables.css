@@ -1,0 +1,45 @@
+@import url(formularios.css);
+
+.table{
+  min-width: min-content;
+  max-width: 50%;
+  border-collapse: collapse;
+  border: none;
+  border-radius: var(--borderRadiusInputs);
+  overflow: hidden;
+  box-shadow: 0px 2px 10px var(--input);
+}
+
+.table__head{
+  background-color: var(--colorCuaternario);
+}
+
+.table__body{
+  background-color: var(--colorAdicional);
+  text-align: center;
+}
+
+.table__cell{
+  padding: 10px 15px;
+}
+
+
+.table__row{
+  border-top: 2px solid var(--colorPrincipal);
+  transition: var(--timeTransition);
+}
+.table__row:hover{
+  background-color: var(--colorSecundario);
+}
+
+.table__button{
+  height: 35px;
+  width: 35px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorTerciario);
+  color: var(--colorPrincipal);
+  border-radius: 50%;
+  transition: var(--timeTransition);
+  border: none;
+}
