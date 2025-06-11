@@ -1,14 +1,16 @@
 @import url(variables.css);
 
 .main{
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
   background-color: var(--colorPrincipal);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  overflow-y: auto;
+  padding: 15px 0;
 }
 
 .main__logo--header{
@@ -29,24 +31,37 @@
   row-gap: 25px;
   padding: 3%;
   align-items: center;
-  width: 50%;
+  width: 40%;
   background-color: var(--colorSecundario);
   border-radius: var(--borderRadiusForms);
   filter: drop-shadow(0px 0 10px var(--colorSombras));
 }
 
+.form--large{
+  width: 50%;
+}
+
 .form--little{
-  width: 40%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 4%s;
 }
 
 .form__space{
   height: max-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .form__space--completed, .form__space--button{
   grid-column: 1 / 3;
+}
+.form__space--selfRow{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 .form__space--button{
   align-items: center;
@@ -111,4 +126,18 @@
 }
 .form__link:hover{
   color: var(--colorTerciario);
+}
+
+
+/* Media Queries */
+@media (max-width: 930px) {
+  .form{
+    width: 60%;
+  }
+  .form--large{
+    width: 70%;
+  }
+  .form--little{
+    width: 50%;
+  }
 }

@@ -35,9 +35,31 @@
   --colorBlanco: #fff;
 
   --sectionSize: 600px;
+  --cardSize: 200px;
+  --iconSize: 40px;
+  --iconSizeBig: 60px;
+
+  --iconHeaderSize: 45px;
+  --fontIconHeader: 1.7rem;
   --borderRadiusForms: 45px;
   --borderRadiusInputs: 25px;
   --headerSize: 80px;
 
   --timeTransition: 0.25s
+}
+
+/* Media Queries */
+@media (max-width: 1440px) {
+  :root{
+    --sectionSize: 500px;
+  }
+}
+
+@media (max-width: 930px) {
+  :root{
+    --headerSize: 60px;
+    --iconHeaderSize: 40px;
+    --fontIconHeader: 1.5rem;
+    --sectionSize: 400px;
+  }
 }

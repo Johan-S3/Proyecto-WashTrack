@@ -2,10 +2,10 @@
 
 body{
   height: 100vh;
-  min-width: 1240px;
+  max-width: 100vw;
   background-color: var(--colorPrincipal);
   display: flex;
-  justify-content: center ;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -44,7 +44,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 600px;
+  width: var(--sectionSize);
   height: 100%;
   background-color: var(--colorSecundario);
   border-radius: var(--borderRadiusForms) 0 0 var(--borderRadiusForms);
@@ -126,4 +126,34 @@ body{
 }
 .form__link:hover{
   color: var(--colorTerciario);
+}
+
+
+/* Media Queries */
+@media (max-width: 1440px) {
+  .main__title{
+    font-size: 5.5rem;
+  }
+  .main__text{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .main{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .main__logo{
+    width: 200px;
+  }
+
+  .main__title{
+    font-size: 5rem;
+  }
+  .main__text{
+    font-size: 1.2rem;
+  }
 }

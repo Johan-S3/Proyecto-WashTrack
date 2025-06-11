@@ -31,7 +31,7 @@ body{
   flex-direction: row;
   align-items: center;
   gap: 30px;
-  font-size: 1.5rem;
+  font-size: var(--fontIconHeader);
 }
 
 /* Estilo para el icono de usuario */
@@ -43,11 +43,11 @@ body{
 .acces__icon{
   text-decoration: none;
   display: flex;
-  height: 45px;
-  width: 45px;
+  height: var(--iconHeaderSize);
+  width: var(--iconHeaderSize);
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: var(--fontIconHeader);
   background-color: var(--colorTerciario);
   color: var(--colorPrincipal);
   border-radius: 50%;
@@ -63,7 +63,7 @@ body{
 /* Estilos para los aside de la página */
 .aside{
   height: calc(100vh - var(--headerSize));
-  width: 300px;
+  width: 100%;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   background-color: var(--colorSecundario);
@@ -96,6 +96,8 @@ body{
   padding: 10px 30px;
   border-top: 1px solid var(--colorSombras);
   transition: var(--timeTransition);
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 /* Estilos para la celda o fila del contenedor de los aside */
 .content__field--center, .content__field--centerCeleste{
@@ -125,7 +127,13 @@ body{
 
 /* Estilo al main de la view para ajustar tamaño minimo */
 .main{
-  min-width: 260px;
+  max-height: calc(100vh - var(--headerSize));
+  min-width: 210px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 /* Estilos para los botones dentro del contenido del aside */
 .content__button{
@@ -135,10 +143,14 @@ body{
   border: none;
   border-radius: var(--borderRadiusInputs);
   background-color: var(--colorTerciario);
-  color: var(--colorSombras);
   font-weight: 500;
   cursor: pointer;
   transition: var(--timeTransition);
+}
+/* Estilos para el link dentro del boton en el aside */
+.content__link{
+  text-decoration: none;
+  color: var(--colorSombras);
 }
 /* Estilo para hover de los botones contenidos en el aside */
 .content__button:hover{
@@ -146,25 +158,23 @@ body{
   scale: 1.05;
 }
 
-/* Estilo para el panel que contiene las cards con información de los vehiculos */
+/* Estilo para el panelVehicle que contiene las cards con información de los vehiculos */
 .panel{
   width: 100%;
-  height: 100%;
-  max-height: calc(100vh - var(--headerSize));
-  padding: 3%;
+  padding: 2%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
-  overflow-y: auto;
-  scrollbar-width: none;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 240px));
   gap: 3%;
-
+  max-height: 50%;
+  overflow-y: auto;
 }
 
 /* Estilos para la card de con información del lavado */
+
 .panel__card{
-  width: 240px;
-  height: 240px;
+  width: var(--cardSize);
+  height: 200px;
   border-radius: var(--borderRadiusInputs);
   background-color: var(--colorAdicional);
   display: grid;
@@ -207,8 +217,8 @@ body{
 }
 
 .space__icon{
-  width: 40px;
-  height: 40px;
+  width: var(--iconSize);
+  height: var(--iconSize);
   display: flex;
   font-size: 20px;
   align-items: center;
@@ -243,13 +253,32 @@ body{
 }
 
 .space__icon--big{
-  width: 60px;
-  height: 60px;
-  font-size: 40px;
+  width: var(--iconSizeBig);
+  height: var(--iconSizeBig);
+  font-size: var(--iconSize);
   color: var(--colorPrincipal);
 }
 
 .space__icon--big:hover{
   scale: 1.2;
   filter: drop-shadow(0px 0px 5spx var(--colorTerciario));
+}
+
+/* Media Queries */
+@media (max-width: 1440px) {
+  body{
+    grid-template-columns: 250px 1fr 250px;
+  }
+}
+
+@media (max-width: 930px) {
+  body{
+    grid-template-columns: 250px 1fr;
+  }
+
+  .aside--historial{
+    width: 0;
+  }
+
+
 }
