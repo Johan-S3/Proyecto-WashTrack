@@ -141,3 +141,15 @@
     width: 50%;
   }
 }
+
+@media (max-width: 720px) {
+  .form{
+    width: 70%;
+  }
+  .form--large{
+    width: 80%;
+  }
+  .form--little{
+    width: 60%;
+  }
+}

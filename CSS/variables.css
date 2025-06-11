@@ -63,3 +63,12 @@
     --sectionSize: 400px;
   }
 }
+
+@media (max-width: 720px) {
+  :root{
+    --headerSize: 60px;
+    --iconHeaderSize: 40px;
+    --fontIconHeader: 1.5rem;
+    --sectionSize: 400px;
+  }
+}

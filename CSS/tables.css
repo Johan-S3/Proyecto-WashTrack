@@ -28,6 +28,11 @@
   align-items: center;
   justify-content: center;
 }
+.table__cell--text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 
 .table__row{
