@@ -28,7 +28,7 @@ formLogin.addEventListener('submit', async (e) => {
       alert('Contraseña incorrecta');
     }
   } catch(error) {
-    alert('Error de red, inténtalo más tarde.');
+    alert('Error de red,   inténtalo más tarde.');
     console.error(error);
   }
 });
