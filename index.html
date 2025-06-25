@@ -21,12 +21,16 @@
     </div>
   </main>
   <section class="section">
-    <form class="form" action="" id="form-Login">
+    <form class="form" action="" id="form-Login" novalidate>
       <h2 class="form__title">Iniciar Sesión</h2>
-      <label class="form__label" for="documento">Numero de documento:</label>
-      <input class="form__input" type="text" name="documento" placeholder="222222222">
-      <label class="form__label" for="contrasenia">Contraseña:</label>
-      <input class="form__input" type="password" name="contrasenia" placeholder="Ingrese su contraseña">
+      <div class="form__space">
+        <label class="form__label" for="documento">Numero de documento:</label>
+        <input class="form__input" type="text" name="documento" placeholder="222222222" required>
+      </div>
+      <div class="form__space">
+        <label class="form__label" for="contrasenia">Contraseña:</label>
+        <input class="form__input" type="password" name="contrasenia" placeholder="Ingrese su contraseña" required>
+      </div>
 
       <button class="form__button" type="submit">Acceder</button>
 
