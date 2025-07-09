@@ -1,6 +1,5 @@
 // Importo los meotdos que se necesitan.
-
-import { outFocus, validarCaracteres, validarFormulario, validarLetras, validarNumeros } from "./module.js";
+import { objeto, outFocus, validarCaracteres, validarFormulario, validarLetras, validarNumeros } from "./module.js";
 
 // Obtengo la referencia del formulario por el ID
 const formRegistro = document.getElementById("form-Registro");
@@ -68,11 +67,11 @@ formRegistro.addEventListener("submit", async (e) => {
       formRegistro.reset();
       window.location.href = 'index.html';
     } else {
-      const errorTexto = await respuesta.text();
-      alert('Error al registrar: ' + errorTexto);
+      const objeto = await respuesta.json();
+      alert(objeto.message + "\n\n" + objeto.errors);
       }
   } catch (error) {
-    alert('Error de red, inténtalo más tarde.');
-    console.error(error);
+    alert(objeto.message + "\nError: \n" + objeto.errors);
+    // console.error(error);
   }
 })

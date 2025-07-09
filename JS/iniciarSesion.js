@@ -37,19 +37,21 @@ formLogin.addEventListener('submit', async (e) => {
     // En una variable almaceno la respuesta de hacer fetch a la ruta que me consulta la cedula ingresada-
     const respuesta = await fetch(`http://localhost:8080/proyecto/api/usuarios/${cedula.value}`);
 
+    // En una variable almaceno la respuesta en JSON.
+    const objeto = await respuesta.json();
+    
     // Si la respuesta no está ok entonces muestra alerta y retorna.
     if (!respuesta.ok) {
-      alert('Usuario no encontrado');
+      alert(objeto.message + "\n\n"+ objeto.data);
       return;
     }
-
-    // En una variable almaceno la respuesta en JSON.
-    const usuario = await respuesta.json();
-    console.log(usuario); //Muestro la respuesta
+    
+    // En una varaible almaceno los datos del usuario
+    const usuarioData = objeto.data;
     
     // Si el valor ingresado en el campo contrasena es igual a la contraseña del usuario obtenido muestra aleta de bienvenida, resetea el formualrio y redirige a la pagina de incio.
-    if (usuario.contrasena === contrasena.value) {
-        alert(`¡Bienvenido, ${usuario.nombre}!`);
+    if (usuarioData.contrasena === contrasena.value) {
+        alert(`¡Bienvenido, ${usuarioData.nombre}!`);
         formLogin.reset();
         window.location.href = 'inicio.html';
     } else { //Si no muestra alerta
